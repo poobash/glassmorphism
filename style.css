@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161623;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+section::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 255, 0.692),rgba(0, 255, 255, 0.74)) ;
+    clip-path: circle(30% at right 70%);
+}
+section::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(cyan,blue,rgb(0, 255, 213));
+    clip-path: circle(20% at 10% 10%);
+}
+.cointainer{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.cointainer .card{
+    position: relative;
+    width:320px;
+    height: 370px;
+    background:rgba(255,255,255, 0.05);
+    margin:20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.815);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+}
+.cointainer .card .content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transition: 0.5s;
+    text-shadow:  5px 5px 5px black;
+}
+.cointainer .card:hover .content{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.cointainer .card .content .imgbx{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px double #161623;
+    
+}
+.cointainer .card .content .imgbx img{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cointainer .card .content .contentbx h3{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 25px;
+    color: rgba(240, 248, 255, 0.404);
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+.cointainer .card .content .contentbx h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+.cointainer .card .uone{
+    position:absolute;
+    bottom: 20px;
+    list-style-type: none;
+    display: flex;
+
+}
+.cointainer .card .uone li{
+    margin: 0 15px;
+    color:white;
+    transform: translateY(5px);
+    transition: 0.2s;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 0;
+}
+.cointainer .card:hover .uone li{
+   transform: translateY(0px);
+    opacity: 1;
+}
+.cointainer .card a{
+    color: rgba(240, 248, 255, 0.377);
+    font-size: 24px;
+    
+}
+
